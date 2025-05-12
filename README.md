@@ -1,81 +1,99 @@
-🧠Análise de Status por Geração
-Este projeto tem como objetivo auxiliar treinadores Pokémon na montagem de times competitivos, utilizando análise de dados e visualizações interativas para comparar os atributos de Pokémon de diferentes gerações. Desenvolvido com Python, Streamlit, Pandas, Matplotlib e NumPy, o sistema fornece insights gráficos que ajudam a entender melhor o potencial de cada Pokémon.
+# 📊 Pokémon Team Builder (Analisador de Status por Geração)
 
-📊 Funcionalidades
-Filtro por geração: selecione uma geração específica de Pokémon para análise detalhada.
+Este projeto é uma aplicação interativa feita com **Streamlit** que auxilia na **análise de status de Pokémon** ao longo das gerações. Ele é especialmente útil para quem deseja montar **times estratégicos**, comparando atributos como HP, ataque, defesa e velocidade, além de tipos mais comuns por geração.
 
-Visualizações de status:
+---
 
-Gráficos de linha, dispersão e barras para os status base (HP, Attack, Defense, Sp. Attack, Sp. Defense, Speed).
+## 🎯 Objetivo
 
-Gráfico de pizza com os tipos primários e secundários mais comuns.
+Oferecer uma interface visual simples para explorar os dados dos Pokémon de diferentes gerações e ajudar jogadores, estrategistas e fãs a tomar decisões mais informadas ao montar seus times.
 
-Top 10 Pokémon por atributo: veja os Pokémon com os maiores valores de cada status dentro de uma geração.
+---
 
-Comparação geral entre gerações: análise da média dos atributos por geração.
+## 🖼️ Funcionalidades
 
-📁 Estrutura do Projeto
-graphql
-Copy
-Edit
-├── pokemon.csv           # Arquivo CSV contendo os dados dos Pokémon
-├── app.py                # Código principal do Streamlit
-└── README.md             # Este arquivo
-🚀 Como executar o projeto
-Certifique-se de que você tem o Python instalado (versão 3.7+ recomendada).
+* Visualização da **média de status por geração** (gráficos de linha, dispersão e colunas).
+* Análise detalhada dos **top 10 Pokémon** de cada geração com base em atributos individuais:
 
-Instale as bibliotecas necessárias:
+  * HP
+  * Speed
+  * Attack
+  * Special Attack
+  * Defense
+  * Special Defense
+* Gráficos de **pizza** mostrando os **tipos primários e secundários mais comuns** em cada geração.
+* Filtros laterais para seleção da geração.
 
-bash
-Copy
-Edit
-pip install streamlit pandas matplotlib numpy
-Execute a aplicação com o Streamlit:
+---
 
-bash
-Copy
-Edit
-streamlit run app.py
-O navegador será aberto automaticamente na aplicação interativa.
+## 🧠 Tecnologias Utilizadas
 
-📌 Requisitos do Arquivo pokemon.csv
-O arquivo pokemon.csv deve conter, pelo menos, as seguintes colunas:
+* [Python](https://www.python.org/)
+* [Streamlit](https://streamlit.io/)
+* [Pandas](https://pandas.pydata.org/)
+* [Matplotlib](https://matplotlib.org/)
+* [NumPy](https://numpy.org/)
 
-name
+---
 
-generation
+## 🗂️ Estrutura Esperada do Dataset
 
-type1
+O aplicativo espera um arquivo chamado `pokemon.csv` com as seguintes colunas:
 
-type2
+* `name`
+* `generation`
+* `type1`
+* `type2`
+* `total`
+* `hp`
+* `attack`
+* `defense`
+* `sp_attack`
+* `sp_defense`
+* `speed`
 
-hp
+> Certifique-se de que o arquivo CSV esteja no mesmo diretório do arquivo principal `.py`.
 
-attack
+---
 
-defense
+## 🚀 Como Executar
 
-sp_attack
+1. Clone o repositório:
 
-sp_defense
+```bash
+git clone https://github.com/seu-usuario/pokemon-team-builder.git
+cd pokemon-team-builder
+```
 
-speed
+2. Instale as dependências:
 
-total
+```bash
+pip install -r requirements.txt
+```
 
-🧠 Objetivo
-O projeto foi criado para ajudar jogadores e entusiastas de Pokémon a tomarem decisões mais estratégicas ao montar times, utilizando dados reais e visualizações para entender melhor os pontos fortes de cada Pokémon por geração.
+3. Execute a aplicação com o Streamlit:
 
-📷 Exemplos de Visualização
-Gráficos interativos de comparação de status.
+```bash
+streamlit run nome_do_arquivo.py
+```
 
-Rankings dos melhores Pokémon por atributo.
+---
 
-Análise da distribuição de tipos em cada geração.
+## 📌 Observações
 
-🧑‍💻 Contribuição
-Contribuições são bem-vindas! Sinta-se livre para abrir issues ou pull requests com melhorias ou correções.
+* O sistema atualmente suporta visualização até a geração 8.
+* O código pode ser facilmente estendido para incluir outras gerações ou mais análises específicas.
 
-📄 Licença
-Este projeto está licenciado sob a MIT License.
+---
 
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir *issues*, sugerir melhorias ou enviar *pull requests*.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
