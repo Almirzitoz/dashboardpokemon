@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st 
 import numpy as np
 
-df = pd.read_csv("pokemon.csv")
+df = pd.read_csv("data/pokemon.csv")
 
 geracoes = sorted(df['generation'].unique())
 
